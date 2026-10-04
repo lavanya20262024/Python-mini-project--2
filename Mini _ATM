@@ -1,0 +1,28 @@
+print("====Mini_ATM====")
+correct_pin=2022
+balance=5000
+pin=int(input("enter pin:"))
+if pin==correct_pin:
+    print("login successful")
+    print("1.check balance")
+    print("2.withdraw money")
+    print("3.Deposit money")
+    choice=int(input("please select one"))
+    if choice==1:
+        print(f"the balance is {balance}")
+    elif choice==2:
+         amount=int(input("please enter the    amount that you are going to withdraw"))
+         if amount>0 and amount<=balance:
+            balance=balance-amount
+            print(f"the final balance             is{balance}")
+    elif choice==3 :
+         amount=int(input("enter the amount that you are going to deposit"))
+         if amount>0:
+              balance=balance+amount
+              print (f"the final balance is{balance}")
+    else:
+           print("please enter correct choice")  
+else:
+      print("Incorrect pin")         
+      
+
